@@ -107,8 +107,7 @@ export const useAuth = create((set, get) => ({
         const socket = io(import.meta.env.VITE_API_URL, {
             query: {
                 userId: get().authUser.id,
-            },
-            reconnection: false
+            }
         })
         set({ socket: socket })
     },
