@@ -105,7 +105,6 @@ export const useAuth = create((set, get) => ({
 
     connectSocket: () => {
         const socket = io(import.meta.env.VITE_API_URL, {
-            transports: ["websocket"],
             query: {
                 userId: get().authUser.id,
             },
